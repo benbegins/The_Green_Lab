@@ -1,0 +1,22 @@
+{
+  "name": "fete-du-sleep",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx mix",
+    "watch": "npx mix watch --hot",
+    "prod": "npx mix --production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "laravel-mix": "^6.0.25",
+    "mix-tailwindcss": "^1.3.0",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
+    "tailwindcss": "^2.2.4"
+  }
+}
