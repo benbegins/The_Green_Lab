@@ -1,0 +1,28 @@
+form {
+	input {
+		@apply bg-light text-dark text-sm rounded-t-xl px-6 py-5 w-full;
+
+		@media screen and (min-width: $md) {
+			@apply rounded-full;
+		}
+		&:focus {
+			outline: 2px solid $green;
+		}
+	}
+
+	input[type="submit"],
+	button.form-submit {
+		@apply bg-green text-light text-sm uppercase font-bold rounded-b-xl px-8 py-5;
+		transition: background 0.25s;
+		width: 100%;
+
+		@media screen and (min-width: $md) {
+			@apply rounded-full;
+			width: auto;
+		}
+
+		&:hover {
+			background-color: darken($green, 15%);
+		}
+	}
+}

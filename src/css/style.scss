@@ -4,11 +4,24 @@ Theme Name: The Green Lab
 Author: Bemy Studio
 Author URI: https://bemy.studio
 Description: The Green Lab
+Text Domain: the-green-lab
 Version: 1.0
 */
 
 @import "tailwindcss/base";
-
 @import "tailwindcss/components";
-
 @import "tailwindcss/utilities";
+
+// Global
+@import "./variables";
+@import "./global";
+
+// Components
+@import "./components/header";
+@import "./components/footer";
+@import "./components/text";
+@import "./components/buttons";
+@import "./components/form";
+
+//Pages
+@import "./pages/homepage";

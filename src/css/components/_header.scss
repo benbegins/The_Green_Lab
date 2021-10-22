@@ -1,0 +1,176 @@
+.site-header {
+	position: absolute;
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-top: 30px;
+
+	@media screen and (min-width: $lg) {
+		padding-top: 4vw;
+	}
+
+	&__burger {
+		cursor: pointer;
+		padding: 10px;
+		position: fixed;
+		right: var(--page-padding);
+
+		@apply z-50;
+
+		@media screen and (min-width: $lg) {
+			padding: 10px 10px 30px 30px;
+			visibility: hidden;
+			opacity: 0;
+			transform: translateY(-100%);
+			transition: visibility 0s, opacity 0.3s, transform 0.3s $ease;
+
+			&.visible {
+				transform: translateY(0);
+				visibility: visible;
+				opacity: 1;
+			}
+
+			&::before {
+				@apply text-xs;
+				content: "MENU";
+				position: absolute;
+				right: 100%;
+				top: (calc(50% - 10px));
+				transform: translateY(-50%);
+				transition: opacity 0.3s;
+			}
+		}
+
+		.line {
+			height: 1px;
+			width: 30px;
+			margin: 6px 0;
+			transition: 0.3s $ease;
+			transform-origin: center right;
+			@apply bg-dark;
+		}
+
+		.line-2 {
+			transform: translateX(-50%);
+		}
+
+		.line-3 {
+			transform: translateX(-25%);
+		}
+
+		&.active {
+			.line {
+				@apply bg-light;
+				@media screen and (min-width: $lg) {
+					@apply bg-dark;
+				}
+			}
+			.line-1 {
+				transform: translateX(0) scaleX(0.75);
+			}
+			.line-2 {
+				transform: translateX(0) scaleX(0.5);
+			}
+			.line-3 {
+				transform: translateX(0);
+			}
+			&::before {
+				opacity: 0;
+			}
+		}
+	}
+
+	&__menu-links {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s linear 0.5s, opacity 0.5s;
+
+		@apply bg-green text-light z-40 uppercase;
+
+		&.active {
+			visibility: visible;
+			opacity: 1;
+			transition: visibility 0s linear 0s, opacity 0.5s;
+		}
+
+		a {
+			padding: 2.5vh 0;
+		}
+
+		@media screen and (min-width: $lg) {
+			width: auto;
+			height: auto;
+			right: var(--page-padding);
+			top: auto;
+
+			align-items: flex-end;
+
+			background: none;
+			visibility: visible;
+			opacity: 1;
+			transition: visibility 0s linear 0s, opacity 0.5s,
+				transform 0.3s $ease;
+
+			@apply text-dark text-sm leading-tight;
+
+			&.hide {
+				z-index: 50;
+				visibility: hidden;
+				opacity: 0;
+				transition: visibility 0s linear 0.5s, opacity 0.5s,
+					transform 0.3s $ease;
+				transform: translateY(50px);
+
+				&.active {
+					@apply bg-dark text-light py-4 px-6 rounded-xl;
+					visibility: visible;
+					opacity: 1;
+					transition: visibility 0s linear 0s, opacity 0.5s;
+
+					a {
+						padding: 5px 0;
+						&::after {
+							@apply bg-light;
+						}
+					}
+				}
+			}
+
+			a {
+				position: relative;
+				padding: 0 0 5px 0;
+
+				&::after {
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 1px;
+					bottom: 5px;
+					right: 0;
+					@apply bg-dark;
+					transition: 0.3s $ease;
+					transform: scaleX(0);
+					transform-origin: center right;
+				}
+
+				&:hover {
+					&::after {
+						transform: scaleX(1);
+					}
+				}
+			}
+		}
+	}
+}

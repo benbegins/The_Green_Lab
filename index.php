@@ -1,5 +1,5 @@
 <?php get_header(); ?>
 
-    <div class="h-40 w-40 bg-blue-500 flex justify-center items-center text-white">Hello</div>
+    <div class="h-40 w-40 bg-green flex justify-center items-center text-light"><?php the_title() ?></div>
 
 <?php get_footer(); ?>

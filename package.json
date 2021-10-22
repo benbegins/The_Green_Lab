@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx mix",
-    "watch": "npx mix watch --hot",
+    "watch": "npx mix watch",
     "prod": "npx mix --production"
   },
   "keywords": [],
@@ -18,5 +18,8 @@
     "sass": "^1.35.2",
     "sass-loader": "^12.1.0",
     "tailwindcss": "^2.2.4"
+  },
+  "dependencies": {
+    "swiper": "^7.0.9"
   }
 }

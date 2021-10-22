@@ -1,0 +1,41 @@
+.site-footer {
+	.logo-bemy {
+		transform: translateY(-1px);
+	}
+
+	// Form
+	form {
+		position: relative;
+
+		.forminator-row {
+			margin: 0 !important;
+			position: relative;
+		}
+
+		.forminator-row.forminator-row-last {
+			@media screen and (min-width: $md) {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+			}
+		}
+
+		.forminator-error-message {
+			position: absolute;
+			bottom: calc(100% + 5px);
+			left: 0;
+			font-size: 12px;
+			width: 100%;
+			@apply text-light;
+			display: none;
+		}
+
+		.forminator-response-message {
+			@apply text-green text-sm;
+			position: absolute;
+			bottom: calc(100% + 5px);
+			left: 0;
+			width: 100%;
+		}
+	}
+}

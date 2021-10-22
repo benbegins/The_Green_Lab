@@ -1,0 +1,16 @@
+.section-name {
+	@apply text-sm font-bold uppercase text-green;
+
+	@media screen and (min-width: $lg) {
+		@apply text-2xl font-serif text-dark leading-none;
+	}
+}
+
+.section-title {
+	@apply text-xl font-serif font-bold;
+	line-height: 1.15;
+
+	@media screen and (min-width: $lg) {
+		line-height: 1;
+	}
+}
