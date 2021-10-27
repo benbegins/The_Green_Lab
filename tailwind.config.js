@@ -1,5 +1,10 @@
 module.exports = {
-	purge: ["./src/**/*.html", "./src/**/*.vue", "./src/**/*.jsx"],
+	purge: [
+		"./src/**/*.html",
+		"./src/**/*.vue",
+		"./src/**/*.jsx",
+		"./**/*.php",
+	],
 	theme: {
 		colors: {
 			dark: "#22292d",
@@ -11,7 +16,7 @@ module.exports = {
 			padding: {
 				DEFAULT: "1.5rem",
 				sm: "3rem",
-				lg: "5vw",
+				lg: "4vw",
 			},
 			center: true,
 		},

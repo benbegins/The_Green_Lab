@@ -1,10 +1,50 @@
 .btn-primary {
-	@apply inline-block bg-dark text-light rounded-full px-10 text-sm uppercase font-semibold;
+	@apply text-sm font-semibold;
+
+	position: relative;
+	z-index: 1;
+
+	display: inline-block;
+	overflow: hidden;
+	padding: 0 2.5rem 2px;
+
 	line-height: 60px;
-	padding-bottom: 2px;
-	transition: 0.3s $ease;
+	text-transform: uppercase;
+
+	background: $dark;
+	color: $light;
+	border-radius: 9999px;
+	// box-shadow: 0 0 0 $dark;
+
+	transition: box-shadow 0.15s;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		z-index: -1;
+
+		background: $green;
+		width: 120%;
+		height: 360%;
+
+		border-radius: 100%;
+		transform-origin: top center;
+		transform: translate(-50%, 0) scale(0.2, 0.1);
+		transition: transform 0.4s $ease, background 0.15s;
+	}
 
 	&:hover {
-		@apply bg-green;
+		// box-shadow: 0 2px 0 $dark;
+		&::after {
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
+
+	&:active {
+		&::after {
+			background: darken($green, 10%);
+		}
 	}
 }

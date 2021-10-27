@@ -1,13 +1,21 @@
 .site-header {
 	position: absolute;
-	z-index: 1;
+	z-index: 2;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
 	padding-top: 30px;
+	opacity: 0;
 
 	@media screen and (min-width: $lg) {
 		padding-top: 4vw;
+	}
+
+	&__logo {
+		width: 130px;
+		@media screen and (min-width: $lg) {
+			width: 140px;
+		}
 	}
 
 	&__burger {
@@ -23,7 +31,7 @@
 			visibility: hidden;
 			opacity: 0;
 			transform: translateY(-100%);
-			transition: visibility 0s, opacity 0.3s, transform 0.3s $ease;
+			transition: visibility 0s, opacity 0.3s, transform 0.4s $ease;
 
 			&.visible {
 				transform: translateY(0);
@@ -121,7 +129,7 @@
 			visibility: visible;
 			opacity: 1;
 			transition: visibility 0s linear 0s, opacity 0.5s,
-				transform 0.3s $ease;
+				transform 0.4s $ease;
 
 			@apply text-dark text-sm leading-tight;
 
@@ -130,7 +138,7 @@
 				visibility: hidden;
 				opacity: 0;
 				transition: visibility 0s linear 0.5s, opacity 0.5s,
-					transform 0.3s $ease;
+					transform 0.4s $ease;
 				transform: translateY(50px);
 
 				&.active {
