@@ -10,7 +10,7 @@
                     </div>
                     <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/img/the-green-lab-logo-circle.svg" alt="Logo The Green Lab - Shopping responsable">
                 </div>
-                <div class="flex justify-center p-6 text-center lg:justify-start lg:p-8">
+                <div class="flex justify-center pb-6 text-center lg:justify-start lg:pb-8 lg:pl-8 lg:-mt-12">
                     <a href="<?= $instagram; ?>" class="inline-block hover:opacity-75" target="_blank"><img src="<?= get_template_directory_uri() ?>/img/icon-instagram-light.svg" alt="Icone Instagram" width="17"></a>
                     <a href="<?= $facebook; ?>" class="inline-block ml-4 hover:opacity-75" target="_blank"><img src="<?= get_template_directory_uri() ?>/img/icon-facebook-light.svg" alt="Icone facebook" width="7"></a>
                 </div>
