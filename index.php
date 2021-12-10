@@ -131,11 +131,9 @@
             ?>
             
             <!-- CTA -->
-            <?php if($crowdfunding): ?>
             <div class="text-center pt-4">
                 <button class="btn-primary link" @click="newsletterActive = true">Suivre notre actualité</button>
             </div>
-            <?php endif; ?>
             
         </section>
 
