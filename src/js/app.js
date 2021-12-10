@@ -14,6 +14,7 @@ const App = {
 			burgerDesktop: false,
 			cursorLink: false,
 			cursorDrag: false,
+			newsletterActive: false,
 		}
 	},
 	methods: {

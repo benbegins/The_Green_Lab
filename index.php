@@ -13,17 +13,13 @@
             <div class="container">
                 <div class="homepage__hero__content">
                     <h1 class="homepage__hero__title">
-                        <div data-parallax-h="-1" class="title-line-container"><span><?= _e('Boutique de mode ', 'the-green-lab'); ?></span></div>
-                        <div data-parallax-h="0.25" class="eco-responsable font-sans text-green title-line-container"><span><?= _e('Eco-responsable ', 'the-green-lab'); ?></span></div> 
-                        <div class="title-line-container"><span><?= _e('à Nantes', 'the-green-lab'); ?></span></div>
+                        <div data-parallax-h="-1" class="title-line-container"><span>Boutique de mode</span></div>
+                        <div data-parallax-h="0.25" class="eco-responsable font-sans text-green title-line-container"><span>Eco-responsable</span></div> 
+                        <div class="title-line-container"><span>à Nantes</span></div>
                     </h1>
                     <div class="homepage__hero__description">
-                        <p>Ouverture de la boutique : <?= strtolower(get_field('ouverture_boutique')) ?>. <br><a href="#footer" class="underline font-semibold text-green cursor-pointer transition transition-200 hover:text-dark">On vous tient au courant !</a> <br>D’ici là, retrouvez nos produits sur Ulule.</p>
-                        <?php 
-                        if($crowdfunding): 
-                        ?>
-                        <a href="<?= $crowdfunding; ?>" class="btn-primary mt-8" target="_blank">Aller sur Ulule</a>
-                        <?php endif; ?>
+                        <p>Ouverture de la boutique : <br><strong><?= strtolower(get_field('ouverture_boutique')) ?>.</strong></p>
+                        <a href="#concept" class="btn-primary mt-8">Découvrir le concept</a>
                     </div>
                 </div>
                 <div class="homepage__hero__social">
@@ -87,12 +83,12 @@
             </div>
         </section>
 
-        <!-- PRODUITS -->
-        <section id="produits" class="section-pad homepage__produits">
+        <!-- MARQUES -->
+        <section id="marques" class="section-pad homepage__produits">
             <div class="container">
                 <!-- Intro products -->
                 <div class="relative">
-                    <h2 class="section-name lg:absolute lg:right-0 lg:bottom-0"><span class="lg:block" data-parallax-h="-1">Les</span> <span class="lg:block" data-parallax-h="1">produits</span></h2>
+                    <h2 class="section-name lg:absolute lg:right-0 lg:bottom-0"><span class="lg:block" data-parallax-h="-1">Les</span> <span class="lg:block" data-parallax-h="1">marques</span></h2>
                     <div class="lg:w-1/2 lg:pr-5">
                         <h3 class="section-title"><?php the_field('produits_titre'); ?></h3>
                         <p class="mt-12"><?php the_field('produits_paragraphe'); ?></p>    
@@ -118,15 +114,7 @@
                                 $query->the_post();
                         ?>
                             <div class="swiper-slide">
-                                <?php if($crowdfunding): ?>
-                                <a href="<?php echo $crowdfunding; ?>" target="_blank">
-                                    <?= get_template_part('template-parts/product-slide');  ?>
-                                </a>
-                                <?php else : ?>
-                                <div>
-                                    <?= get_template_part('template-parts/product-slide');  ?>
-                                </div>
-                                <?php endif; ?>
+                                <?= get_template_part('template-parts/product-slide');  ?>
                             </div>
                         <?php
                             endwhile;
@@ -145,7 +133,7 @@
             <!-- CTA -->
             <?php if($crowdfunding): ?>
             <div class="text-center pt-4">
-                <a href="<?= $crowdfunding; ?>" class="btn-primary" target="_blank">Acheter sur Ulule</a>
+                <button class="btn-primary link" @click="newsletterActive = true">Suivre notre actualité</button>
             </div>
             <?php endif; ?>
             
@@ -285,6 +273,22 @@
                 </div>   
                 
             </div>
+        </section>
+
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter" :class="{active: newsletterActive}">
+            <div class="container">
+                <div class="text-center px-6 md:px-12 lg:w-2/5 lg:mx-auto">
+                    <h2 class="uppercase font-serif text-xl">Newsletter</h2>
+                    <p class="mt-12 text-sm">Renseignez votre adresse mail si vous souhaitez être tenu informé de l’ouverture de notre boutique et de notre actualité.</p>
+                    <div class="my-12">
+                        <?= do_shortcode('[forminator_form id="63"]'); ?>
+                        <p class="text-xs opacity-50 mt-2">En validant, vous acceptez de recevoir des emails de la part de Wearth Lab.</p>    
+                    </div>
+                </div>
+            </div>
+            <button class="btn-close" @click="newsletterActive = false">Retour au site</button>
         </section>
 
     </div>

@@ -1,0 +1,68 @@
+.newsletter {
+	@apply fixed inset-0 min-h-screen bg-dark text-light;
+	z-index: 100;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s linear 0.5s, opacity 0.5s;
+
+	&.active {
+		visibility: visible;
+		opacity: 1;
+		transition: visibility 0s linear 0s, opacity 0.5s;
+	}
+
+	@media screen and (min-width: $md) {
+		@apply flex items-center justify-center;
+	}
+
+	.container {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+
+	form {
+		position: relative;
+
+		.forminator-row {
+			margin: 0 !important;
+			position: relative;
+		}
+
+		.forminator-row.forminator-row-last {
+			@media screen and (min-width: $md) {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+			}
+		}
+
+		.forminator-error-message {
+			position: absolute;
+			bottom: calc(100% + 5px);
+			left: 0;
+			font-size: 12px;
+			width: 100%;
+			@apply text-light;
+			display: none;
+		}
+
+		.forminator-response-message {
+			@apply text-green text-sm;
+			position: absolute;
+			bottom: calc(100% + 5px);
+			left: 0;
+			width: 100%;
+		}
+	}
+
+	.btn-close {
+		@apply absolute text-dark bg-light uppercase px-4 py-2 rounded-full text-xs font-bold;
+		bottom: 30px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		@media screen and (min-width: $lg) {
+			bottom: 5vh;
+		}
+	}
+}

@@ -2,7 +2,7 @@
     <?php the_post_thumbnail('medium_large', ['class' => 'visuel-produit']); ?>
 
     <!-- Icones produits -->
-    <?php 
+    <!-- <?php 
         $icones_produit = get_the_terms($post->ID, 'icone');
         if($icones_produit):
     ?>
@@ -19,12 +19,12 @@
 
         <?php endforeach; ?>    
     </ul>
-    <?php endif; ?>
+    <?php endif; ?> -->
     <!-- Fin icones -->
 
 </div>
-<p class="mt-4 text-sm text-green"><?php the_field('nom_de_la_marque'); ?></p>
-<h4 class="font-semibold uppercase"><?php the_title(); ?></h4>
-<p><?php the_field('prix'); ?> €</p>
+<!-- <p class="mt-4 text-sm text-green"><?php the_field('nom_de_la_marque'); ?></p> -->
+<h4 class="font-semibold uppercase mt-4"><?php the_title(); ?></h4>
+<!-- <p><?php the_field('prix'); ?> €</p> -->
 
     
