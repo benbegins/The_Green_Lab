@@ -95,6 +95,18 @@
 			margin-top: 8vw;
 		}
 	}
+	.icones {
+		&__item {
+			&__img-container {
+				@apply flex justify-center items-center;
+				height: 60px;
+			}
+			p {
+				@apply text-center;
+				line-height: 1.1;
+			}
+		}
+	}
 }
 
 // PRODUITS

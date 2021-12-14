@@ -58,7 +58,7 @@
                     <h3 class="section-title"><?php the_field('concept_titre'); ?></h3>
                     <p class="my-12"><?php the_field('concept_paragraphe'); ?></p>
                     <!-- Liste icones -->
-                    <ul class="homepage__concept__icones grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4 lg:mt-6">
+                    <ul class="icones__list grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4 lg:mt-6 xl:grid-cols-5">
                         <?php 
                         $icones = get_terms( array( 
                             'taxonomy' => 'icone',
@@ -69,10 +69,13 @@
                         foreach ($icones as $icone):
                             $name = $icone->name;
                             $visuel = get_field('visuel', 'icone_' . $icone->term_id);
+                            $width = $visuel['width'] / 2;
                         ?>
-                        <li class="flex flex-col items-center">
-                            <img src="<?= $visuel['url']; ?>" alt="<?= 'icone ' . $name; ?>" width="48" height="48">
-                            <p class="mt-2 text-center"><?= $name; ?></p>
+                        <li class="icones__item">
+                            <div class="icones__item__img-container">
+                                <img src="<?= $visuel['url']; ?>" alt="<?= 'icone ' . $name; ?>" width="<?= $width; ?>">    
+                            </div>
+                            <p><?= $name; ?></p>
                         </li>
 
                         <?php
