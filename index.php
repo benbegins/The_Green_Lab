@@ -182,11 +182,11 @@
                 <div class="mt-12 md:grid md:grid-cols-2 md:gap-10 lg:w-3/5 lg:mx-auto lg:gap-16">
                     <div>
                         <p class="text-sm uppercase font-bold text-green">(01)</p>
-                        <p class="text-lg"><strong>Proposer</strong> une sélection de vêtements et d’accessoires de ces marques qu’il est possible de voir, toucher et essayer.</p>
+                        <p class="text-lg"><strong>Valoriser</strong> un ensemble de marques qui partagent les mêmes valeurs responsables et éthiques.</p>
                     </div>
                     <div class="mt-12 md:mt-0">
                         <p class="text-sm uppercase font-bold text-green">(02)</p>
-                        <p class="text-lg"><strong>Valoriser</strong> un ensemble de marques qui partagent les mêmes valeurs responsables et éthiques.</p>
+                        <p class="text-lg"><strong>Proposer</strong> une sélection de vêtements et d’accessoires de ces marques qu’il est possible de voir, toucher et essayer.</p>
                     </div>
                 </div>
             </div>
