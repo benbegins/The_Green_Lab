@@ -14,6 +14,28 @@
 	}
 }
 
+.text-xs {
+}
+.text-sm {
+}
+.text-base {
+}
+.text-lg {
+	@media screen and (min-width: $md) {
+		font-size: calc(0.95rem + 0.35vw);
+	}
+}
+.text-xl {
+	@media screen and (min-width: $md) {
+		font-size: 3.25vw;
+	}
+}
+.text-2xl {
+	@media screen and (min-width: $md) {
+		font-size: 6.2vw;
+	}
+}
+
 html {
 	scroll-behavior: smooth;
 	@media (prefers-reduced-motion: reduce) {

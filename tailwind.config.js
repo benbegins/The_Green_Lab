@@ -28,12 +28,9 @@ module.exports = {
 			xs: ["0.8125rem", { lineHeight: "1.5" }],
 			sm: ["0.9375rem", { lineHeight: "1.5" }],
 			base: ["1.0625rem", { lineHeight: "1.5" }],
-			lg: [
-				"max(calc(0.95rem + 0.35vw), 1.125rem)",
-				{ lineHeight: "1.6" },
-			],
-			xl: ["max(3.25vw, 1.75rem)", { lineHeight: "1" }],
-			"2xl": ["max(6.2vw, 2.875rem)", { lineHeight: "1" }],
+			lg: ["1.125rem", { lineHeight: "1.6" }],
+			xl: ["1.75rem", { lineHeight: "1" }],
+			"2xl": ["2.875rem", { lineHeight: "1" }],
 		},
 		screens: {
 			sm: "640px",
