@@ -1,3 +1,8 @@
+    <?php 
+    $instagram = get_field('instagram', 'option');
+    $facebook = get_field('facebook', 'option'); 
+    ?>
+    
     <footer class="site-footer" id="footer">
         <div class="container">
             <div class="bg-dark text-light rounded-b-3xl">
