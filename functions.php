@@ -65,3 +65,6 @@ add_image_size( 'xxl', 1900);
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
+
+//Disable plugin auto-update email notification
+add_filter('auto_plugin_update_send_email', '__return_false');
