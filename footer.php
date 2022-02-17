@@ -8,7 +8,7 @@
             <div class="bg-dark text-light rounded-b-3xl">
                 <div class="text-center section-pad px-6 md:px-12 lg:w-2/5 lg:mx-auto">
                     <h2 class="uppercase font-serif text-xl">On reste en contact</h2>
-                    <p class="mt-12">Renseignez votre adresse mail si vous souhaitez être tenu informé de l’ouverture de notre boutique et de notre actualité.</p>
+                    <p class="mt-12">Abonnez-vous à notre newsletter et soyez parmi les premiers informés de nos nouveaux articles, collaborations, et événements.</p>
                     <div class="my-12">
                         <?= do_shortcode('[forminator_form id="63"]'); ?>
                         <p class="text-xs opacity-50 mt-2">En validant, vous acceptez de recevoir des emails de la part de Wearth Lab.</p>    

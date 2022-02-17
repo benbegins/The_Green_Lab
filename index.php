@@ -18,8 +18,8 @@
                         <div class="title-line-container"><span>à Nantes</span></div>
                     </h1>
                     <div class="homepage__hero__description">
-                        <p>Ouverture de la boutique : <br><strong><?= strtolower(get_field('ouverture_boutique')) ?>.</strong></p>
-                        <a href="#concept" class="btn-primary mt-8">Découvrir le concept</a>
+                        <!-- <p>Ouverture de la boutique : <br><strong><?= strtolower(get_field('ouverture_boutique')) ?>.</strong></p> -->
+                        <a href="#concept" class="btn-primary">Découvrir le concept</a>
                     </div>
                 </div>
                 <div class="homepage__hero__social">
@@ -268,8 +268,10 @@
                         </a>
                     </div>
                     <div class="text-center p-12 lg:flex-auto lg:self-center">
-                        <h2 class="text-lg uppercase leading-none">Ouverture de la boutique <br><strong><?php the_field('ouverture_boutique'); ?></strong></h2>
-                        <p class="mt-6">13 rue du château, 44000 Nantes</p>
+                        <p class="mt-6"><strong>Adresse :</strong></p>
+                        <p>13 rue du château, 44000 Nantes</p>
+                        <p class="mt-6"><strong>Horaires :</strong></p>
+                        <p>Lundi : 12h-19h <br>Mardi au Samedi : 10h30-19h</p>
                     </div>
                 </div>   
                 
